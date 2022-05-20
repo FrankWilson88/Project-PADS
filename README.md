@@ -37,8 +37,8 @@ FEATURES
 ============================
 INSTALLATION INSTRUCTIONS
 ============================
-- Download pads_v1.0.0_Installer from GitHub at:
-- cd into directory you downloaded from
+- Clone the Project with git clone https://github.com/FrankWilson88/Project-PADS.git
+- cd into directory you downloaded to
 - Run: source pads_v1.0.0_Installer
 
 ============================
