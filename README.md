@@ -1,4 +1,6 @@
                                             ---Welcome to PADS---
+Official Release = May 21, 2022 10:30am est.
+
 Version = 1.0.0
 
 Contact = armyglass@hotmail.com
