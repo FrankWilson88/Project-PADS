@@ -2,6 +2,6 @@
 
 mkdir ${HOME}/Documents/pads
 tar -xzvf pads.tar.gz -C ${HOME}/Documents/pads
-chmod 755 ${HOME}/Documents/pads/bash/brain
-${HOME}/Documents/pads/bash/brain -s
+chmod 755 ${HOME}/Documents/pads/pads/bash/brain
+${HOME}/Documents/pads/pads/bash/brain -s
 
