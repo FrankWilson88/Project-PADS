@@ -1,6 +1,6 @@
 #!/bin/bash
 
 mkdir ${HOME}/Documents/pads
-tar -xzvf ${HOME}/Downloads/pads_v1.0.0.tar.gz
+tar -xzvf pads_v1.0.0.tar.gz -C ${HOME}/Documents/pads
 chmod 755 ${HOME}/Documents/pads/bash/brain
 ${HOME}/Documents/pads/bash/brain -s
