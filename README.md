@@ -112,16 +112,24 @@ DEPENDENCIES
 CORE FILES
 
 ===========================
-- brain
-- functions.sh
-- log_msg.sh
-- response.sh
-- software_install.sh
-- styles.sh
-- memory/logs Directory
-- memory/profiles Directory
-- memory/requirements/pads_requirements.txt
-- websites/accounting (Django Project)
+- pads/bash/
+  - brain
+  - functions.sh
+  - log_msg.sh
+  - response.sh
+  - software_install.sh
+  - styles.sh
+- pads/conky/
+- pads/memory/logs/
+- pads/memory/profiles/
+- pads/memory/requirements/
+  - pads_requirements.txt
+- pads/movies/
+- pads/music/
+- pads/pictures/
+- pads/python/
+- pads/websites/
+  - accounting
 
 ===========================
 
