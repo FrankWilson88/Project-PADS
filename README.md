@@ -45,7 +45,7 @@ INSTALLATION INSTRUCTIONS
 ============================
 - Clone the Project with git clone https://github.com/FrankWilson88/Project-PADS.git
 - cd into directory you downloaded to
-- Run: source pads_v1.0.0_Installer
+- Run: source pads_1.0.0_Installer
 
 ============================
 
