@@ -165,13 +165,13 @@ Usage: pads [-h|v|s|f] [ARG][ARG]
 
 Options:
 
-  -h                          Print the Usage and exit
+    -h                          Print the Usage and exit
 
-  -v                          Print the Version and exit
+    -v                          Print the Version and exit
 
-  -s                          Install important Software and exit
+    -s                          Install important Software and exit
 
-  -f    [name|help][port]     Run any function and exit
+    -f    [name|help][port]     Run any function and exit
 
 Ex: pads -f help || pads -h || pads -f django testproject 8080 || pads -f delete testproject
 
