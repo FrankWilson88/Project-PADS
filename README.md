@@ -161,17 +161,20 @@ If you are on Rasbian/Debian, you can update first. The installer also updates b
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-<p>
 Usage: pads [-h|v|s|f] [ARG][ARG]
+
 Options:
 
   -h                          Print the Usage and exit
+
   -v                          Print the Version and exit
+
   -s                          Install important Software and exit
+
   -f    [name|help][port]     Run any function and exit
 
 Ex: pads -f help || pads -h || pads -f django testproject 8080 || pads -f delete testproject
-</p><br>
+
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
