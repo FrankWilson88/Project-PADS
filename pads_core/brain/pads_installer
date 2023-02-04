@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -d /usr/local/bin/pads_core ]; then
+  tar -xzvf pads_v1.0.3.tar.gz -C /usr/local/bin/
+  mv /usr/local/bin/pads_core/brain/pads /usr/local/bin/
+  pads -d
+else
+  echo "I'm already installed!"
+fi

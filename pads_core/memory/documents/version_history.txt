@@ -1,0 +1,45 @@
+Version = 1.0.3
+
+Version Control:
+
+Sometime in 2019 - Version 0.0.0
+Work began on the Army Glass website
+
+June 23, 2021 - Version 0.0.1
+Work began on Project Eniac in Python
+Eniac Server came online
+
+Oct 13, 2021 @ 11:48pm - Version 0.0.2
+Original Accounting Database came online
+Development of the original File System began
+
+May 4, 2022 - Version 0.0.3
+Original Project Eniac Syntax was developed in Bash
+
+May 18, 2022 - Version 0.0.4
+Project renamed to PADS(Personal Assistant and Deployment System)
+
+May 19, 2022 - Version 1.0.0
+Code refractored and made more cross compatable
+Created Installer
+Created readme, help, usage, and copyright files
+
+May 21, 2022 - Version 1.0.0
+Offical Release uploaded at 10:30am est.
+
+June 4, 2022 - Version 1.0.1
+Made some Tweeks and bug fixes to the installer, and .tar file
+Added more images and a zoom feature to the Product Detailed View
+
+June 7, 2022 - Version 1.0.2
+Work on README template
+Fill in Shipping info, Return info, Terms of Service
+Was messing with installing to /usr/local/bin. But decided to keep installed in /Documents and have no exports.
+
+August 28, 2022 - Version 1.0.3
+Changed installer to /usr/local/bin/
+Began work on Accounting GUI
+Moved PADS to hpElite with 16gb RAM, i5 4 core, 240gb SSD, Manjaro
+Changed brain.sh to pads and made it executeable
+Moved all core files to pads_core directory
+Began work on adding a gaming layer with Steam, Lutris, Wine, and Proton

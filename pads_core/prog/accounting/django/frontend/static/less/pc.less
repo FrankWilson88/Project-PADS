@@ -1,0 +1,217 @@
+:root{
+  --btn_w: 100px;
+  --dot_w: calc(var(--btn_w) * .25);
+  --tr: calc(var(--btn_w) - var(--dot_w));
+}
+
+@media only screen and (min-width: 1200px) {
+  /* For desktop: */
+  body{
+    font-family: Zen Kurenaido;
+    background: black;
+    color: white;
+  }
+  a{text-decoration: none;}
+  ul, ul li{list-style-type: none; font-family: Amatic SC; font-size: 25px;}
+  
+  div.btn a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+  div.btn{
+    position: relative;
+    display: block;
+    border: 2px solid blue;
+    border-radius: 25px;
+    background: rgba(0,0,255,.5);
+    margin: 10px;
+    padding: 10px;
+    width: var(--btn_w);
+    height: 100%;
+    float: right;
+  }
+  div.orb{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: var(--dot_w);
+    height: 100%;
+    top: 0;
+    left: 10px;
+  }
+  div.orb:after{
+    content: "";
+    color: red;
+    position: absolute;
+    box-shadow: 0 0 8px 0 blue, 0 0 25px 0 blue;
+    background: white;
+    border: 2px solid blue;
+    border-radius: 10px;
+    height: 10px;
+    width: 10px;
+    left: 10px;
+    top: -8px;
+  }
+  div.btn:hover div.orb{animation: spinner1 5s infinite linear; display: inline-block;}
+  @keyframes spinner1{
+    0% {transform: translateX(0) rotate(0);}
+    30%{transform: translateX(var(--tr)) rotate(0);}
+    50% {transform: translateX(var(--tr)) rotate(180deg);}
+    80% {transform: translateX(0) rotate(180deg);}
+    100% {transform: translateX(0) rotate(360deg);}
+  }
+
+  header .parallax{
+    background-image: url("/static/img/banner.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  header .title{
+    color: white;
+    width: 30%;
+    position: absolute;
+    right: 15%;
+    padding: 25px 5px;
+  }
+  header .title h1{
+    font-family: Griffy;
+    margin: 0px;
+  }
+  header .title q{
+    font-family: Amatic SC;
+    font-size: 25px;
+    font-variant: small-caps;
+  }
+  header a{transition: color .5s;}
+  header a:hover{color: white;}
+  header a:active{color: red; transition: color 0s;}
+  header .slideshow{
+    color: white;
+    font-family: Zen Kurenaido;
+    width: 50%;
+    text-align: center;
+    position: relative;
+  }
+  header .slideshow .slide img{
+    width: 100%;
+    height: 25em;
+    padding: 15px;
+  }
+  header .slide{transition: box-shadow .5s;}
+  header .slide:hover{
+    box-shadow: 5px 5px 5px white;
+  }
+  header .slideNumber{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: inline;
+  }
+  header .itemName{
+    position: relative;
+    bottom: 75px;
+    color: white;
+    font-size: 35px;
+  }
+  header .itemName:hover{color: blue;}
+  header .itemName:active{color:red;}
+  header .dotWrapper{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+  header .dot{
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+  }
+
+  div.pc div.item{
+    text-align: center;
+    padding: 15px;
+    transition: border .5s, box-shadow .5s;
+  }
+  div.pc div.item:hover{
+    border: 2px solid white;
+    box-shadow: 5px 5px 5px white;
+  }
+  div.pc div.item img{
+    width: 100%;
+    height: 25em;
+  }
+  div.pc div.item a{
+    color: white;
+    margin: 15px;
+    padding: 10px 15px;
+    border: 2px solid rgb(16,36,179);
+    border-radius: 10px;
+    background:  rgba(16,36,179,.5);
+    transition: color .5s, background .5s;
+  }
+  div.pc div.item a:hover{color: yellow; background: black;}
+  div.pc div.item a:active{
+    color: white;
+    border: 2px solid red;
+    background: red;
+    box-shadow: 1px 1px 0px 1px black inset;
+    transition: color 0s;
+  }
+
+  div.about{
+    margin: 15px;
+  }
+
+  div.about table{
+    margin: 5% 25%;
+  }
+  div.about table tr{
+    padding: 10px 10px;
+    display: block;
+  }
+  div.about table tr td{
+    padding: 0 15px;
+  }
+  div.about table tr td a img{
+    width: 50px;
+  }
+
+  footer{
+    font-family: Cinzel;
+    font-variant: small-caps;
+    font-family: 20px;
+    width: 100%;
+    margin: 10px;
+    clear: both;
+  }
+  footer small{width: 25%;}
+  footer small a{color: yellow; text-decoration: none;}
+  footer small a:hover{color: white;}
+  footer small a:active{color: red;}
+  footer p{font-size: 15px; clear: both;}
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}

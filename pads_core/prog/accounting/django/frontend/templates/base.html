@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta name="robots" content="index follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Joe Corso">
+		<meta name="keywords" content="{% block keywords %}{% endblock %}">
+		<meta name="description" content="{% block description %}{% endblock %}">
+		<link href="{% static 'css/main.css' %}?{% now 'U' %}" rel="stylesheet">
+		<link href="{% static 'css/accounting.css' %}?{% now 'U' %}" rel="stylesheet">
+		<link href="{% static 'img/favicon.ico' %}" rel="icon" type="image/x-icon">
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	
+	<body class="row">
+		<header>
+			<div class="parallax">
+			<div class="title">
+				<h1>Welcome to Your Accounting Software!</h1>
+				<q>Motivational Quote to get you pumped!</q>
+				<ul>Notifications:
+					<li>Click <a target="_blank" href="https://squareup.com/gift/YKR5XHXK7J8Z8/order" title="Redirect to Square.com">here</a> to get my mans a gift card!</li>
+					<li>Sexy live videos <a target="_blank" href="https://www.twitch.tv/armyglass" title="Redirect to Twitch">here</a>
+				</ul>
+			</div>
+
+			
+			<div class="slideshow">
+				{% for c in prodo  %}
+				<div class="slide">
+					<div class="slideNumber">{{ c.snid }}</div>
+					<img src="{{ c.image.url }}">
+					<a href="/prodo/{{ c.snid }}" class="itemName" title="Click for Details and Purchase">{{ c.model }}</a>
+				</div>
+				{% endfor %}
+
+				<div class="dotWrapper">
+					{% for c in prodo  %}
+					<span class="dot"></span>
+					{% endfor %}
+				</div>
+			</div>
+			</div>
+		</header>
+
+		<nav class="pc tablet mobile round_spinner_blue">
+			<img src="{% static 'img/menuIcon.png' %}" onclick="openMenu()" alt="Menu">
+			<div id="mobileMenu" class="mobileMenu">
+				<a href="{% url 'index' %}" title="Takes you to the Store">Home</a>
+				<a href="{% url 'about' %}" title="Contact info, Shipping, Mission, etc.">About</a>
+				{% if user.is_superuser %}
+					{% include 'super_nav.html' %}
+				{% endif %}
+			</div>
+		</nav>
+		
+		{% block content %}{% endblock %}
+		
+		{% if user.is_superuser %}
+			{% block super %}{% endblock %}
+		{% endif %}
+		
+		<footer>
+			<div id="clock">clock error</div>
+			<small>
+				Copyright &copy; <a href="https://www.armyglass.org" target="_blank" title="Web Design">Army Glass </a><div id="copyright">copyright error</div><br>
+				<a href="https://www.flaticon.com/free-icons/ui" target="_blank" title="ui icons">Ui icons created by IYAHICON - Flaticon</a>
+			</small><br>
+		</footer>
+	</body>
+	<script src="{% static 'js/clock.js' %}"></script>
+	<script src="{% static 'js/less.js' %}"></script>
+	<script src="{% static 'js/slideshow.js' %}"></script>
+	<script src="{% static 'js/mobileMenu.js' %}"></script>
+	<script src="{% static 'js/magnifyImg.js' %}"></script>
+	<script src="{% static 'js/tab.js' %}"></script>
+</html>

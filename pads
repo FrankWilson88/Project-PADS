@@ -1,0 +1,141 @@
+#!/bin/bash
+
+
+############################################################
+############################################################
+# This file imports all the modules, creates the vars,     #
+# styles and creates the options.                          #
+#                                                          #
+# >:^D-K                                                   #
+############################################################
+############################################################
+
+############################################################
+############################################################
+#             Variables/Source Files                       #
+############################################################
+############################################################
+
+#
+# Date/Time Formats
+#
+time=$(date +%T)
+m=$(date +%M)
+
+#
+# Collect useful information about your system
+# $USER is automatically defined
+#
+
+hostname=$(uname -n)
+distro=$(grep '^NAME' /etc/os-release)
+kernal=$(uname -r)
+cpu=$(uname -p)
+cpuload=$(cat /proc/loadavg | awk '{print $1 ", " $2 ", " $3}')
+machine=$(cat /proc/cpuinfo | grep 'model name' | head -1 | cut -d':' -f2)
+uptime=$(uptime -p)
+iptables=$(systemctl is-active iptables)
+ip6tables=$(systemctl is-active ip6tables)
+diskuse=$(df --output=pcent / | sed 1d)
+battery=$(upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | awk '/percentage/ {print $2}')
+#swap=$(free -m | tail -n 1 | awk {'print $2'})
+disk=$(df -h / | awk '{ a = $2 } END { print a }')
+#freememory=$(free -m | head -n 2 | tail -n 1 | awk {'print $4'})
+#freeswap=$(free -m | tail -n 1 | awk {'print $4'})
+freedisk=$(df -h / | awk '{ a = $4 } END { print a }')
+padsversion=$(grep 'Version =' /usr/local/bin/pads_core/memory/documents/version_history.txt)
+
+#
+# Main Directory Paths
+#
+PADS_PATH="/usr/local/bin/pads_core"
+BRAIN_PATH="${PADS_PATH}/brain"
+MEMORY_PATH="${PADS_PATH}/memory"
+PROG_PATH="${PADS_PATH}/prog"
+SANDBOX_PATH="${PADS_PATH}/sandbox"
+
+#
+# Sub directory Paths
+VIDEO_PATH="${MEMORY_PATH}/video"
+AUDIO_PATH="${MEMORY_PATH}/audio"
+IMG_PATH="${MEMORY_PATH}/img"
+PYTHON_PATH="${PADS_PATH}/prog/python"
+WEBSITES_PATH="${PADS_PATH}/prog/websites"
+ICON_PATH="${IMG_PATH}/icons"
+LOG_PATH="${MEMORY_PATH}/logs"
+
+#
+# File Paths
+#
+SUCCESS_LOG="${LOG_PATH}/success_log.txt"
+ERROR_LOG="${LOG_PATH}/error_log.txt"
+HISTORY_LOG="${LOG_PATH}/history_log.txt"
+IP_LOG="${LOG_PATH}/ip_log.txt"
+
+#
+# Backup Paths
+#
+BACKUP_PATH="/usr/local/bin/pads_core/memory/backup"
+PADS_BACKUP="${BACKUP_PATH}/pads_v1.1.0.tar.gz"
+SERVER_PATH="/run/mount/storage/backup/pads_backup"
+
+#
+# Source Paths
+#
+. ${BRAIN_PATH}/response.sh
+. ${BRAIN_PATH}/log_msg.sh
+. ${BRAIN_PATH}/styles.sh
+
+############################################################
+############################################################
+#                         Help                             #
+############################################################
+############################################################
+
+usage()(
+  cat ${MEMORY_PATH}/documents/usage.txt
+  echo ""
+)
+
+manual()(
+  cat ${MEMORY_PATH}/documents/help.txt
+  echo ""
+  cat ${MEMORY_PATH}/documents/copyright.txt
+  echo ""
+  echo ""
+  usage
+)
+
+############################################################
+############################################################
+#                     Main program                         #
+############################################################
+############################################################
+
+
+while getopts "dfhpv" option; do
+  case $option in
+    d)
+      . ${BRAIN_PATH}/setup.sh
+      exit;;
+    f)
+      . ${BRAIN_PATH}/functions.sh 
+      $2 $3 $4
+      exit;;
+    h) 
+      usage
+      exit;;
+    p)
+      python ${PYTHON_PATH}
+      exit;;
+    v)
+      echo ${padsversion}
+      exit;;
+    *)
+      error
+      exit;;
+      esac
+done
+manual
+
+

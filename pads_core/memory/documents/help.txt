@@ -1,0 +1,9 @@
+                                ----WELCOME TO PADS!----
+
+PADS(Personal Assistant and Deployment System) is General Purpose Artificial Intelligence designed to carry out every day business tasks.
+It's purpose is to provide book keeping, employee timesheets, client tracking, automation, etc. It can do double entry accounting for hybrid manufacturing companies. 
+None of the data is loaded as Environment Variables, so your interaction with PADS is between you and it.
+It's original purpose was to serve as a website, with a relational historical database. Work on this project began in Python using the Django Framework on June 23, 2021 at 5:30pm.
+The accounting database first came online Oct. 13th, 2021 at 11:48pm. The Bash Syntax was first created by Joe Corso on May 4th, 2022. 
+It was previously codenamed Project Eniac, to pay homage to the original project of the same name.
+For in depth documentation, please visit: https://www.wormhole.click

@@ -1,0 +1,9 @@
+conky
+python3
+python-pip
+mysql
+sox # to play sounds in the terminal
+nginx-mainline
+git
+zenity
+libnotify # for notify-send

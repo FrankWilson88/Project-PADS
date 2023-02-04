@@ -1,0 +1,22 @@
+Server Setup:
+
+-Install Arch Linux
+  |-Dependancies: base linux linux-firmware neofetch fakeroot nano sudo man-db man-pages texinfo lshw upower dhcpcd iwd networkmanager
+  |-EFI Dir for /dev/sda1 is /boot/efi NOT /boot or /mnt/boot
+-Install xorg xorg-apps xorg-server xterm
+-Install PADS and Dependancies
+-Set up A Record on registrar website(dynu.com)
+-Set up Port Forwarding on Router
+-Backup System
+-Install nginx uwsgi ssl
+-Documentation!!!!!
+
+Updating Pads:
+
+- Update Version
+- Update usage
+- Update function help
+- Update syntax
+- Update git
+- Update git readme
+- Backup system

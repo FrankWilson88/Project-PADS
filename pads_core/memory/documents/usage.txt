@@ -1,0 +1,8 @@
+  Usage: pads [-d|f|h|p|v] [ARG][ARG]
+    Options:
+      -d                          Install Dependencies and exit
+      -f    [name|help][port]	  Run any function and exit
+      -h                          Print the Usage and exit
+      -p                          Run the Python Module and exit
+      -v                          Print the Version and exit
+  Ex: pads -f help || pads -f django testsite 8080 || pads -f django testproject 8080 || pads -f django delete testproject

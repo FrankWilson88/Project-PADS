@@ -1,0 +1,5 @@
+User clicked Home Page 2022-06-14 19:11:39.617865
+User clicked Home Page 2022-06-14 19:12:11.591780
+User clicked Home Page 2022-06-14 19:14:48.333205
+User clicked About Page 2022-06-14 19:14:59.840975
+User clicked About Page 2022-06-14 19:16:14.821113

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block keywords %}SEO, keywords, here{% endblock %}
+{% block description %}Information about the software{% endblock %}
+{% block title %}About | Accounting{% endblock %}
+
+{% block content %}
+	<div class="about">
+		<h1>Accounting | About</h1>
+		
+		<div class="col-5 col-s-5">
+			<h2>Mission:</h2>
+			<p>We have a philosophy at Army Glass, and that is Happiness. We find happiness in sharing ours with you! We'll be there for you to lean on. We'll help bring you happiness.
+			</p>
+		</div>
+		
+		<div class="col-5 col-s 5">
+			<h2>A Veteran Owned Hand Blown Glass Art Company.</h2>
+			<p>Army Glass may not be a good shot on the range, but we aim to please.
+			So what's there to say about that? After a long hard day of operating your favorite equipment, and making sure I can operate mine.<br> You want to come home, and relax. That's where Army Glass comes in. You'll know that after you step off the range drenched in sweat, and possibly other things, that you can reach for your favorite piece.<br> We'll be sure we can be that favorite piece.</p>
+		</div>
+		
+		<div class="col-5 col-s 5">
+			<h2>Shipping Info:</h2>
+			<p>The item will be shipped within 2 business days of a completed transaction. The tracking number will be emailed to you.</p>
+		</div>
+
+		<div class="col-5 col-s 5">
+			<h2>Return Info:</h2>
+			<p>I do not accept returns on used items. I accept refunds, or replacements on items that are damaged in shipping. Contact me at armyglass@hotmail.com with your name, and a picture of the damaged item.</p>
+		</div>
+
+		<div class="col-5 col-s 5">
+			<h2>Terms of Service:</h2>
+			<p>All software is written in-house with no third party cookies, or any cookies of that sort. The only other third party software necessary for the operation of the website is the credit card processing. As a company we are not large enough to enjoy a Merchant Account, and thus, are required to use third party software to process credit card transactions. We currently use SquareUp to process credit cards, and by choosing to purchase, you, the user, agree to Square Terms of Service for any protocols neccessary for them(Square) to process your(the user) credit card info.</p>
+		</div>
+
+		<div class="col-5 col-s-5">
+			<h2>Contact:</h2>
+			<nav>
+				<a href='https://www.instagram.com/armyglass/' target='_blank' title="Visit Instagram"><img src="{% static 'img/smLink/ig.png' %}"></a>
+				<a href='https://www.facebook.com/armyglass' target='_blank' title="Visit Facebook"><img src="{% static 'img/smLink/fb.png' %}"></a>
+				<a href='mailto:armyglass@hotmail.com?subject=website%20query' title="Send Email"><img src="{% static 'img/smLink/email.png' %}"></a>			
+			</nav>
+		</div>
+  </div>
+{% endblock %}
